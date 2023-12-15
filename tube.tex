@@ -1,0 +1,311 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{paper-en}
+\usepackage{hyperref}
+%\usepackage[notref,notcite,color]{showkeys}
+
+
+\def\thetitle{Tubed embeddings}
+\def\theauthors{Anton Petrunin}
+
+\hypersetup{colorlinks=true,
+citecolor=black,
+linkcolor=black,
+anchorcolor=black,
+filecolor=black,
+menucolor=black,
+urlcolor=black,
+pdftitle={\thetitle},
+pdfauthor={\theauthors}
+}
+
+%\overfullrule=100mm
+
+\begin{document}
+
+%\pagestyle{empty}\renewcommand\includegraphics[2][{}]{}
+
+
+\title{\thetitle}
+\author{\theauthors}
+\date{}
+\maketitle
+
+\begin{abstract}
+We consider the following question.
+Which Riemannian manifolds admit a isometric embeddings with uniformly thick tubular neighborhood into 
+a Euclidean space?
+\end{abstract}
+
+\section{Introduction}
+
+Let $M$ be a compete Riemannian manifold.
+We say that $M$ has \label{uniform polynomial volume growth} \emph{uniform 
+polynomial volume growth} if there is a polynomial $p$ such that 
+\[\vol B(x,R)_M\le p(R)\]
+for any point $x\in M$ and any radius $R\ge 0$;
+here $B(x,R)_M$ denotes open ball in $M$ of radius $R$ centered at $x$.
+
+Suppose $S$ is a smooth submanifold in a Euclidean space.
+Denote by $W$ its $\eps$-neighborhood.
+We say that $W$ is tubular neighborhood of $S$ if the closest-point projection $W\to S$ is uniquely defined.
+In this case we say that $S$ has an \emph{$\eps$-thick tubular neighborhood}.
+(Equivalently, $S$ has an $\eps$-thick tubular neighborhood if the restriction of the exponential map to the $\eps$-neighborhood of the zero section in the normal bundle $\N S$ is injective.)
+
+\begin{thm}{Observation}
+Suppose a complete Riemannian manifold $M$ is isometrically embedded in a Euclidean space
+and its image has a $\eps$-thick tubular neighborhood.
+Then $M$ has
+\begin{enumerate}[(i)]
+\item bounded sectional curvature,
+\item positive injectivity radius,
+\item\label{uniform polynomial volume growth} uniform polynomial volume growth.
+\end{enumerate}
+\end{thm}
+
+Let $M$ be a complete Riemannian manifold. 
+We say that $M$ has \emph{bounded geometry} if its injectivity radius is bounded away from zero and for any for every $k\in\NN$ there is a constant $C_k > 0$ such that $|\nabla^k \Rm| \le C_k$, where $\nabla$ is the Levi-Civita connection and $\Rm$ the curvature tensor on $M$.
+The following theorem gives a partial converse to the observation.
+
+\begin{thm}{Theorem}
+Suppose $M$ is a complete smooth Riemannian manifold with bounded geometry.
+Then, $M$ has uniform polynomial volume growth
+if and only if
+there is a smooth isometric embedding of $M \hookrightarrow \RR^q$ 
+with tubular $\eps$-neighborhood for some $\eps>0$ and an integer $q>0$.
+\end{thm}
+
+The proof combines the arguments of
+Robert Krauthgamer,
+and James Lee 
+\cite{krauthgamer-lee0,krauthgamer-lee1} about graph embedding with the version 
+of Nash's embedding theorem of
+Matthias Günther \cite{guenther}.
+
+
+\parbf{Acknowledgments.} 
+This note is inspired by the question of Peter Michor \cite{124840}.
+I want to thank 
+Michael Gromov
+and
+Danielel Semola for help.
+
+\section{Observation}
+
+\begin{thm}{Lemma}\label{lem:gauss}
+Suppose $M$ is a smooth submanifold in $\RR^q$ with normal curvatures at most 1.
+Then sectional curvature of $M$ lies in the range $[-2,1]$.
+\end{thm}
+
+\parit{Proof.}
+It is sufficient to consider the case $\dim M=2$.
+Denote by $\T_p$ and $\N_p$ the tangent plane ans the normal space at $p\in M$.
+Denote by $s$ the second fundamental form of $M$ at $p$;
+it is a symmetric quadratic form on $\T_p$ with values in $\N_p$.
+
+Let $h\in \N_p$ and $\zh\in\RR$ be the average values of $s(u,u)$ and $|s(u,u)|^2$ for unit vectors $u\in \T_p$.
+By the Gauss formula \cite[2.1]{petrunin2023}, we have
+\[K=3\cdot |h|^2-2\cdot \zh,\]
+where $K$ is the Gauss of $M$ at $p$.
+Note that $|h|^2\le \zh$.
+Since the normal curvatures are at most 1, we have $\zh\le 1$.
+Hence the lemma follows.
+\qeds
+
+\parit{Proof of the observation.}
+Suppose  a smooth $n$-dimensional submanifold $M$ in $\RR^q$ has a $\eps$-thick tubular neighborhood $W$.
+
+Note that normal curvatures of $M$ cannot exceed $\tfrac1\eps$.
+By the lemma, $M$ has bounded curvature;
+moreover sectional curvature of $M$ does not exceed $\tfrac1{\eps^2}$.
+
+Given $p\in M$, denote by $i(p)$ the injectivity radius of $M$ at $p$.
+Let us show that $i(p)\ge\eps$ at any point $p\in M$.
+
+Suppose $i(p)<\eps$ for some $p$.
+Since the sectional curvatures of $M$ do not exceed $\tfrac1{\eps^2}$,
+Klingenberg's theorem implies that there is a geodesic loop $\gamma$ based at $p$ with length $2\cdot i(p)$.
+Let $r=\max_{x\in\gamma}|p-x|$.
+Note that $r<i(p)$ and $\gamma$ has curvature at least $\tfrac1r$ at $x$.
+It follows that a normal curvature of $M$ at $x$ exceeds $\tfrac1\eps$ --- a contradiction.
+
+Consider the closest point projection $\pi\:W\to M$.
+Note that there is a constant $c=c(\eps,n,q)>0$ such that
+\[\vol_q (\pi^{-1}X)\ge c\cdot\vol_n X\]
+for any measurable set $X\subset M$.
+
+Note that $B(x,R)_M\subset B(x,R)_{\RR^q}$ for any $x\in M$;
+here $B(x,R)_M$ and $B(x,R)_{\RR^q}$ denote balls in the metric of $M$ and $\RR^q$ respectively.
+Therefore 
+\[\pi^{-1}[B(x,R)_M]\subset B(x,R+\eps)_{\RR^q}.\]
+Since $\vol_q B(x,R+\eps)_{\RR^q}$ is a polynomial in $R$, we get that $M$ has uniform polynomial volume growth.
+\qeds
+
+\section{Theorem}
+
+Let $(M,g)$ be a Riemannian manifold with bounded geometry.
+A function $\phi\:M\to \RR$ will be called \emph{uniformly smooth} if for any positive integer $k$ there is a constant $C_k$ such that $\tfrac{d^k}{dt^k}(\phi\circ\gamma)(t)\le C_k$ for any unit-speed geodesic $\gamma$.
+A map $M\to \RR^{q}$ is called uniformly smooth if all its components are uniformly smooth. 
+
+Suppose $f_1\:M\to \RR^{q_1}$ and $f_2\:M\to \RR^{q_2}$ are smooth maps.
+The map $f\:M\to \RR^{q_1}\oplus\RR^{q_2}=\RR^{q_1+q_2}$ defined by $f\:x\mapsto (f_1(x),f_2(x))$ is called \emph{direct sum} of $f_1$ and $f_2$ (briefly, $f=f_1\oplus f_2$).
+
+
+\begin{thm}{Claim}
+Let $(M,g)$ be a Riemannian manifold with bounded geometry.
+Suppose that uniformly smooth maps $f_i\:M\to \RR^{q_i}$ satisfy the following properties
+for some fixed $R>r>0$ and $\delta>0$.
+\begin{enumerate}[(a)]
+\item\label{clm:r} If $|x-y|_M>r$, then $|f_1(x)-f_1(y)|_{\RR^{q_2}}>\delta$.
+\item\label{clm:R} If $|x-y|_M<R$, then $|f_2(x)-f_2(y)|_{\RR^{q_2}}>\delta\cdot |x-y|_M$.
+\item\label{clm:g} $g=g_1+g_2+g_3$, where $g_i$ denoted the metric on $M$ induced by $f_i$.
+\end{enumerate}
+Then $f=f_1\oplus f_2\oplus f_3$ is an isometric embedding of $(M,g)$ and its image admits a uniformly thick tubular neighborhood. 
+\end{thm}
+
+\parit{Proof.}
+Note that $g=g_1+g_2+g_3$, is the metric induced by $f$ on $M$.
+It follows that $f$ is a uniformly smooth isometric immersion.
+In particular, the image $f(M)$ has bounded normal curvatures.
+
+Note the conditions \ref{clm:r} and \ref{clm:R} imply that $f$ is an embedding.
+Suppose $f(M)$ does not admit a uniformly thick tubular neighborhood;
+that is, for any $\eps>0$ there is a point $x\in \RR^q$ that lies on distance smaller than $\eps$ to $f(M)$ such that the distance function from $x$ has at least two minimum points on $f(M)$,
+say $f(y)$ and $f(z)$.
+Denote by $\gamma$ a minimizing geodesic from $y$ to $z$.
+
+Suppose $\eps>0$ is sufficiently small.
+Then the properties \ref{clm:r} and \ref{clm:R} imply that $\length\gamma<2\cdot\tfrac\eps\delta$.
+Let $p\in\gamma$ be a point that maximizes the distance from $x$; let $\rho=|x-p|$.
+A straightforward distance estimate gives $\rho\le \eps\cdot(1+\tfrac1\delta)$.
+It follows that the curvature of $\gamma$ at $p$ is at least $\tfrac1\rho\ge \tfrac1\eps\cdot \tfrac\delta{1+\delta}$.
+The latter is impossible for sufficiently small $\eps$.
+\qeds
+
+The maps $f_1$, $f_2$ and $f_3$ will be constructed separately.
+
+
+
+\parbf{Construction of $\bm{f_1}$.}
+Let $G$ be a connected graph.
+Recall that $G$ comes with the shortest-path distance on its vertex set $\Vert G$.
+Therefore, we can talk about balls $B(x,R)_G$ for any $x\in \Vert G$;
+the number of vertices in $B(x,R)_G$ will be denoted by $|B(x,R)_G|$.
+We say that $G$ has uniformly polynomial growth if there is a polynomial $p$ such that 
+\[|B(x,R)_G|\le p(R)\]
+for any point $x\in G$ and any radius $R\ge 0$.
+We will write $v\sim w$ if two vertices $v$ and $w$ are adjecent. 
+The next statement follows from \cite[Theorem 5.5]{krauthgamer-lee1}.
+
+\begin{thm}{Graph-embedding theorem}
+Suppose $G$ is a connected graph with uniformly polynomial growth.
+Then, for some positive integer $q_1$ there is a map $\Phi\:\Vert G\to \RR^q$ such that
+for any two vertices $v$ and $w$ we have
+\begin{align*}
+|\Phi(v)-\Phi(w)|&\ge1\qquad\text{if}\ v\ne w,
+\\
+|\Phi(v)-\Phi(w)|&\le q\qquad\text{if}\ v\ \text{and}\ w\ \text{are adjecent}.
+\end{align*}
+
+\end{thm}
+
+Choose sufficiently small $r>0$ so that any $r$ ball in $M$ is very close to Euclidean $r$-ball in the Gromov--Hausdorff sense.
+Consider a maximal (with respect to inclusion) set $V\subset M$ of points on distance at least $r$ from each other.
+Note that 
+\[M=\bigcup_{v\in V} B(v,r)_M.\]
+Let $G$ be the graph with vertex set $V$ such that two vertices $v,w\in V$ are adjacent if $B(v,r)_M\cap B(v,r)_M \ne \emptyset$.
+
+
+The construction of $f_2$ is done by elementary means.
+Finally, the construction of $f_3$ uses Nash's theorem about regular embeddings.
+
+
+
+
+\begin{thm}{Lemma}\label{lem:bounded-curvature}
+Let $M$ be a complete Riemannian manifold with bounded geometry.
+Then, for sufficiently large integer $q$, there is a smooth isometric immersion $M\looparrowright\RR^q$ with bounded normal curvatures.
+\end{thm}
+
+
+
+\begin{thm}{Lemma}\label{lem:Krauthgamer-Lee}
+Let $M$ be a complete smooth Riemannian manifold with bounded geometry.
+Assume $M$ has uniform polynomial volume growth.
+Then, given $\eps>0$ there is $\delta>0$ and sufficiently large integer $q$, there is a smooth short map $\iota\:M\to\RR^q$ if $|x-y|_M>\eps$ then $|\iota(x)-\iota(y)|_{\RR^q}>\delta$.
+Moreover, if $h$ is the metric on $M$ induced by $\iota$ and $g$ is the Riemannian metric on $M$, then we can assume that $h$ is $C^{2,\alpha}$ bounded and
+\[h<\tfrac1{10}\cdot g.\]
+
+\end{thm}
+
+\begin{thm}{Lemma}\label{lem:Krauthgamer-Lee}
+Let $M$ be a complete smooth Riemannian manifold with $C^{2,\alpha}$-bounded geometry for some $\alpha>0$.
+Then, there is a smooth immersion $\iota\:M\looparrowright\RR^q$ such that 
+$|\iota(x)-\iota(y)|_{\RR^q}>\tfrac12\cdot |x-y|_M$
+for any $x,y\in M$ such that $|x-y|_M<\eps$.
+Moreover, if $h$ is the metric on $M$ induced by $\iota$ and $g$ is the Riemannian metric on $M$, then $h$ is $C^{2,\alpha}$ bounded and
+\[h<\tfrac1{10}\cdot g.\]
+
+\end{thm}
+
+\parit{Proof of the theorem.}
+Let $\iota_0$ be the smooth map provided by Lemma~\ref{lem:Krauthgamer-Lee}.
+Suppose that $h$ is the metric tensor induced by $\iota$.
+Observe that $g_1=g-h$ is a Riemannian metric tensor on $M$ with $C^{2,\alpha}$-bounded geometry.
+
+Suppose $\iota_1$ is the immersion provided by \ref{lem:bounded-curvature}.
+Observe that $\iota=\iota_0\oplus\iota_1$ meets the conditions in the theorem.
+\qeds
+
+\section{Remarks}
+
+\cite{schick}
+
+{\sloppy
+\printbibliography[heading=bibintoc]
+\fussy
+}
+\end{document}
+
+
+
+\section{Bounded geometry}
+
+\begin{thm}{Proposition}
+Let $M$ be a complete $n$-dimensional Riemannian manifold.
+If $M$ has $C^{2,\alpha}$-bounded geometry, then it has a 
+Then there is a covering of $M$ by countable number of charts and a constants $m$ and $\eps>0$ such that
+at most $m$ have a common point,
+any ball of radius $\eps$ in $M$ is covered by a chart.
+The transition maps of the atlas have are uniformly bounded in $C^{4,\alpha}$.
+\end{thm}
+
+
+\section{Partial converse}
+
+Let $M$ be a complete smooth Riemannian manifold;
+denote by $g$ its Riemannian metric.
+We will always assume that $g$ is $C^\infty$-smooth.
+
+Suppose $k\ge 0$ is an integer and $0\le \alpha\le 1$.
+We say that $g$ is \emph{uniformly $C^{k,\alpha}$} (briefly $g\in C^{k,\alpha}_u$) if for some constants $r>0$ and $\eps>0$ there is an atlas on $M$ 
+such that 
+\begin{itemize}
+\item any $r$-ball $B\subset M$ can be covered by a chart such that the $C^{k,\alpha}$-norms of components of $g$ are $\tfrac1\eps$-bounded and $\det g>\eps$, and 
+\item the gluing maps of the atlas have $C^{k,\alpha}$-norms bounded by $\tfrac1\eps$.
+\end{itemize}
+
+
+
+
+\parbf{Remarks.}
+\begin{itemize}
+\item Note that the charts above are bi-Lipschitz with uniform Lipschitz constants.
+\item If $g\in C^{k,0}$ if and only if $M$ has $(k-2)^\text{th}$ order bounded geometry as it defined in \cite{eldering2013}.
+\item If $g\in C^{k,\alpha}$ and $k+\alpha\ge 2$, then $M$ has bounded curvature.
+Moreover, Klingenberg's injectivity-radius theorem implies that the \textit{injectivity radius of $M$ is bounded away from zero.}
+\end{itemize}
+
+\begin{thm}{Theorem}
+Suppose $M$ is a complete smooth Riemannian manifold with $C^{2,\alpha}_u$ metric for $\alpha>0$.
+Then, for some $\eps>0$ and $q\in \ZZ$, there is a smooth isometric embedding of $M \hookrightarrow \RR^q$ with tubular $\eps$-neighborhood.
+\end{thm}
