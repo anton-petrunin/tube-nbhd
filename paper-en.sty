@@ -5,6 +5,7 @@
 \usepackage{epsfig,lpic,wrapfig}
 \usepackage{alphabeta}
 %\usepackage{fixltx2e}%provides \textsubscript
+\usepackage[shortlabels]{enumitem}
 \usepackage{tikz}
 \usetikzlibrary{arrows}
 
@@ -44,7 +45,17 @@ isbn=false]{biblatex}
 \DeclareFieldFormat{pages}{#1}
 %removes p. in the cites
 
-\hyphenation{Kapo-vitch}
+\usepackage{accsupp}
+\usepackage{soulutf8}
+\sodef\an{}{.1em}{.5em plus.1em}{.5em plus.1em minus.1em}
+
+\newcommand\ann[1]{%
+    \BeginAccSupp{method=escape,ActualText={\detokenize{#1}}}%
+      \an{#1}%
+    \EndAccSupp{}%
+}
+
+\def\emph{\ann}
 
 \renewcommand{\thesubsection}{\thesection\Alph{subsection}}
 
@@ -67,7 +78,8 @@ isbn=false]{biblatex}
 \end{picture}}
 \newcommand{\de}{\delta}
 \def\op{\operatorname}
-\def\Cone{\operatorname{Cone}}
+\def\Cone{\operatorname{\rm Cone}}
+\def\Conv{\text{\rm Conv}}
 \def\Const{\text{\rm Const}}
 \newcommand*{\angk}[4]{\tilde\measuredangle^{#1}(#2\,{}^{#3}_{#4}\hspace{-0.2ex})}
 \def\area{\operatorname{\rm area}}
@@ -76,7 +88,7 @@ isbn=false]{biblatex}
 \def\CAT{\operatorname{\rm CAT}}
 \def\codim{\operatorname{\rm codim}}
 \def\dim{\operatorname{\rm dim}}
-\def\dir{\operatorname{\rm dir}}
+\def\inj{\operatorname{\rm inj}}
 \def\div{\mathop{\rm div}}
 \def\dist{\operatorname{\rm dist}}
 \def\Dom{\mathop{\rm Dom}\nolimits}
@@ -87,12 +99,11 @@ isbn=false]{biblatex}
 \def\rank{\operatorname{\rm rank}\nolimits}
 \def\Rm{\operatorname{\rm Rm}}
 \def\Sc{\mathrm{Sc}}
-\def\Int{\operatorname{\rm Int}}
 \def\Im{\operatorname{\rm Im}}
-\def\Str{\operatorname{\rm Str}}
 \def\tr{\operatorname{\rm tr}}
 \def\supp{\operatorname{\rm supp}}
 \def\A{\mathrm{A}}
+\def\DD{\mathbb{D}}
 \def\EE{\mathbb{E}}
 \def\R{\mathbb{R}}
 \def\RP{\mathbb{R}\mathrm{P}}
@@ -124,14 +135,23 @@ isbn=false]{biblatex}
 \def\geq{\geqslant}
 \def\leq{\leqslant}
 \def\phi{\varphi}
+\def\sec{\mathrm{sec}}
 \def\i{\subset}
 \def\length{\mathop{\rm length}\nolimits}
-\newcommand*{\set}[2]{\l\{\,\l.{#1}\vphantom{#2}\,\r|\,{#2}\,\r\}}
+\newcommand*{\set}[2]{\left\{\,\left.{#1}\vphantom{#2}\,\right|\,{#2}\,\right\}}
 \def\:{\colon}
 \def\acts{\curvearrowright}
 \def\id{\mathrm{id}}
 \renewcommand*\vec[1]{\text{\sc{#1}}}
 \def\zh{\textsl{Ж}}
+\def\emptyset{\varnothing}
+
+\usepackage{chngcntr}
+\counterwithout{paragraph}{section}
+\renewcommand{\theparagraph}{\arabic{paragraph}}
+\setcounter{secnumdepth}{4}
+\usepackage{titlesec}
+\titleformat{\paragraph}[runin]{\normalfont\bfseries}{\theparagraph.}{\wordsep}{}
 
 %LIST STILES
 \renewcommand{\@listI}{%
@@ -201,6 +221,7 @@ isbn=false]{biblatex}
 \makeatother
 
 \hyphenation{
+Kapo-vitch
 Pol-te-ro-vich
 Ury-sohn
 }
