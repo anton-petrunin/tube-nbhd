@@ -178,7 +178,15 @@ isbn=false]{biblatex}
 \newcounter{eqtn}
 \renewcommand{\@eqnnum}{\theeqtn}
 \renewcommand{\theeqtn}{\numform{eqtn}}
-\newcommand{\eqlbl}[1]{\refstepcounter{eqtn}\eqno\text{\numform{eqtn}\label{#1}}}
+\newcommand{\eqlbl}[1]{\refstepcounter{eqtn}\leqno\text{\numform{eqtn}\label{#1}}}
+
+%CLAIM
+\def\clmclaim#1{\par\medskip\noindent\refstepcounter{eqtn}\hbox{\rm\numform{eqtn} #1}
+\it%\ignorespaces
+}
+\def\endclmclaim{\par
+\medskip}
+\newenvironment{clm}{\clmclaim}{\endclmclaim}
 
 \let\oldcdot\cdot
 \def\cdot{{\hskip0.5pt\oldcdot\hskip0.5pt}}
