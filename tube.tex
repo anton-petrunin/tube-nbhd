@@ -42,7 +42,7 @@ Let $M$ and $N$ be Riemannian manifolds; we will always assume that Riemannian m
 
 A smooth embedding $f\:M\hookrightarrow N$ will be called \emph{tubed} if the image $f(M)\z\subset N$ is a closed subset and it admits a tubular $\eps$-neighborhood for some $\eps>0$;
 that is, the closest-point projection from the $\eps$-neighborhood of $f(M)$ to $f(M)$ is uniquely defined.
-Equivalently, \textit{$f(M)$ is a set with positive reach} \cite{federer,bangert}.
+Equivalently, one may say that \textit{$f(M)$ is a set with positive reach} \cite{federer,bangert}.
 
 We say that $M$ has \emph{uniformly polynomial growth} if there is a polynomial $p$ such that 
 \[\vol B(x,R)_M\le p(R)\]
@@ -68,14 +68,14 @@ therefore, it does not admit an isometric tubed embedding into $\RR^d$ for any i
 
 
 \paragraph{}\label{par:main} 
-Further, the sectional curvature of $M$ will be denoted by $\sec_M$;
+The sectional curvature of $M$ will be denoted by $\sec_M$;
 its injectivity radius at point $p\in M$ will be denoted by $\inj_pM$, and $\inj M$ will denote the injectivity radius of $M$; that is, 
 \[\inj M\df \inf\set{\inj_pM}{p\in M}.\]
 
-We say that $M$ has \emph{bounded geometry} if $\inj M>0$ and for every $k\in\NN$ there is a constant $C_k > 0$ such that $|\nabla^k \Rm| \le C_k$;
+We say that $M$ has \emph{bounded geometry} if $\inj M>0$ and for every integer $k\ge 0$ there is a constant $C_k > 0$ such that $|\nabla^k \Rm| \le C_k$;
 here $\nabla$ denotes the Levi-Civita connection, and $\Rm$ is the curvature tensor on $M$.
-Note that manifolds with bounded geometry have bounded sectional curvature.
-(Some authors define bounded geometry as bounded sectional curvature and injectivity radius --- we do not follow this convention.)
+(Evidently, manifolds with bounded geometry have bounded sectional curvature.
+Some authors define bounded geometry as bounded sectional curvature and injectivity radius --- we do not follow this convention.)
 
 \begin{thm}{Main theorem}
 Suppose $M$ is a Riemannian manifold with bounded geometry.
@@ -86,7 +86,7 @@ Moreover, the dimension $d$ can be found in terms of the dimension and a growth 
 \end{thm}
 
 \paragraph{Other ambient spaces.}\label{par:other-intro}
-Loosely speaking, the following statement says that there is no universal space --- no space can serve as a target of an isometric tubed embedding for \textit{any} $n$-manifolds with bounded geometry.
+Loosely speaking, the following statement says that there is no universal space --- no space can serve as a target of an isometric tubed embedding for \textit{any} $n$-manifold with bounded geometry.
 
 \begin{thm}{Proposition}
 Let $N$ be a Riemannian manifold with bounded geometry and $n\ge 2$.
@@ -99,7 +99,7 @@ It is done by means of elementary differential geometry.
 
 To prove the main theorem (§\ref{par:main}), we approximate the manifold by a graph (§\ref{par:intersection-graph}) and apply a slight modification of 
 the theorem by Robert Krauthgamer and James Lee \cite{krauthgamer-lee0,krauthgamer-lee1} (§\ref{par:Phi}).
-It produces a map $f_1\:M\to \RR^{d_1}$ such that $|f_1(x)-f_1(y)|$ is bounded away from zero for all pairs $x,y\in M$ on distance at least $R$ from each other for fixed $R>0$ (§\ref{par:rough-embedding}).
+It produces a map $f_1\:M\to \RR^{d_1}$ such that $|f_1(x)-f_1(y)|$ is bounded away from zero for all pairs $x,y\in M$ on distance at least $R$ from each other for some fixed $R>0$ (§\ref{par:rough-embedding}).
 
 Further, in §\ref{par:local-embedding}, we construct another map $f_2\:M\to \RR^{d_2}$ that is bi-Lipschitz in every ball of radius $R$.
 The direct sum $f_1\oplus f_2$ is an embedding.
@@ -145,7 +145,7 @@ It is straightforward to check that the inequality $0\le |h|^2 \le \zh$ is the o
 Therefore, \textit{the obtained bounds are optimal}.
 
 \paragraph{}\label{par:obs-proof}
-The first two parts of the the observation in §\ref{par:Observation} follow from a more general result by Stephanie Alexander and Richard Bishop \cite[1.4]{alexander-bishop};
+The first two parts of the observation in §\ref{par:Observation} follow from a more general result by Stephanie Alexander and Richard Bishop \cite[1.4]{alexander-bishop},
 but we include proofs for completeness.
 
 \parit{Proof of the observation in §\ref{par:Observation}.}
@@ -165,13 +165,13 @@ Let us show that $\inj M\ge\eps$; suppose $\inj_pM<\eps$ for some~$p$.
 Since $\sec_M\le\tfrac1{\eps^2}$,
 Klingenberg's lemma \cite[5.6]{cheeger-ebin} implies that there is a geodesic loop $\gamma$ based at $p$ with length $2\cdot \inj_pM$.
 Let \[r=\max\set{|p-q|_{\RR^d}}{q\in\gamma}.\]
-Note that $r<\inj_pM$, and $\gamma$ has curvature at least $\tfrac1r$ at $q$.
+Observe that $r<\inj_pM$, and $\gamma$ has curvature at least $\tfrac1r$ at $q$.
 It follows that the normal curvature of $M$ at $q$ in the direction of $\gamma$ exceeds $\tfrac1\eps$ --- a contradiction.
 
 Consider the closest point projection $\pi\:W\z\to M$.
-Note that there is a constant $c\z=c(\eps,n,d)>0$ such that
+By Weyl's tube formula \cite{gray}, there is a constant $c\z=c(\eps,n,d)>0$ such that
 \[\vol_d (\pi^{-1}X)\ge c\cdot\vol_n X\]
-for any measurable set $X\subset M$.
+for any open set $X\subset M$.
 
 {
 
@@ -186,7 +186,7 @@ Note that $B(x,R)_M\subset B(x,R)_{\RR^d}$ for any $x\in M$;
 here $B(x,R)_M$ and $B(x,R)_{\RR^d}$ denote balls in the metric of $M$ and $\RR^d$ respectively.
 Therefore 
 \[\pi^{-1}[B(x,R)_M]\subset B(x,R+\eps)_{\RR^d}.\]
-Since $R\mapsto \vol_d B(x,R+\eps)_{\RR^d}$ is a polynomial function, we get that $M$ has uniformly  polynomial growth.
+Since $R\mapsto \vol_d B(x,R+\eps)_{\RR^d}$ is a polynomial function, we conclude that $M$ has uniformly  polynomial growth.
 \qeds
 
 }
@@ -196,7 +196,8 @@ Since $R\mapsto \vol_d B(x,R+\eps)_{\RR^d}$ is a polynomial function, we get tha
 \paragraph{}\label{par:graph-embedding}
 Let $\Gamma$ be a connected graph.
 Recall that $\Gamma$ comes with the shortest-path distance on its vertex set $\Vert \Gamma$.
-So, we can talk about ball $B(x,R)_\Gamma$ for any center $x\in \Vert \Gamma$ and radius $R>0$.
+(In other words, we equip all graphs with the length metric having all edges of length 1, but consider only the restriction of this metric to the set of vertices and disregard the edges.)
+So, we can talk about the ball $B(x,R)_\Gamma$ for any center $x\in \Vert \Gamma$ and radius $R>0$.
 The number of vertices in $B(x,R)_\Gamma$ will be denoted by $|B(x,R)_\Gamma|$.
 We say that $\Gamma$ has \emph{uniformly polynomial growth} if there is a polynomial $p$ such that 
 \[|B(x,R)_\Gamma|\le p(R)\]
@@ -243,14 +244,14 @@ After an appropriate rescaling, the obtained map meets the conditions.
 \paragraph{Intersection graph.}\label{par:intersection-graph}
 Let $M$ be a complete connected Riemannian manifold.
 Choose $r>0$.
-Suppose $V\subset M$ is a maximal set of points (with respect to inclusion) on distance at least $r$ from each other.
+Suppose $V\subset M$ is a maximal set of points (with respect to inclusion) at a distance at least $r$ from each other.
 Given $v\in V$, set $B_v=B(v,r)_M$ and $\lambda\cdot B_v=B(v,\lambda\cdot r)_M$.
-Note that
+By the construction, we have that 
 \textit{
 \begin{enumerate}[(i)]
 \item\label{item:1/2B} the balls $\{\tfrac12\cdot B_v\}_{v\in V}$ are disjoint;
 \item $\{B_v\}_{v\in V}$ is an open cover of $M$;
-\item $\{2\cdot B_v\}_{v\in V}$ is an open cover of $M$ with Lebesgue number~$r$.
+\item\label{item:Lebesgue} $\{2\cdot B_v\}_{v\in V}$ is an open cover of $M$ with a Lebesgue number~$r$.
 \item\label{item:1/N} If $M$ has bounded geometry, then for any positive real $\lambda$, there is an integer $N_\lambda$ such that any $\lambda\cdot r$-ball in $M$ contains at most $N_\lambda$ points of $V$.
 \end{enumerate}
 }
@@ -262,8 +263,8 @@ here $v\sim w$ means that $v$ is adjacent to $w$ in $\Gamma_\lambda$.
 
 Assume $M$ has bounded geometry.
 By \textit{\ref{item:1/N}}, $\Gamma_\lambda$ has degree at most~$N_{2\cdot\lambda}-1$.
-Note that 
-\[\lambda\cdot r\cdot |v-w|_{\Gamma_\lambda}\ge |v-w|_M\eqlbl{eq:dist-G}\]
+Since $v\sim w$ implies |$v-w|_M< 2\cdot\lambda\cdot r$, we have
+\[2\cdot\lambda\cdot r\cdot |v-w|_{\Gamma_\lambda}\ge |v-w|_M\eqlbl{eq:dist-G}\]
 for any $v,w\in V$.
 
 If $M$ has bounded geometry, there is $\delta>0$ such that $\vol (\tfrac12\cdot B_v) >\delta$ for any $v\in V$.
@@ -273,7 +274,7 @@ Therefore, \textit{\ref{item:1/2B}} and \ref{eq:dist-G} implies the following:
 \begin{enumerate}[(i)]\addtocounter{enumi}{4}
 \item If $M$ has bounded geometry and uniformly polynomial growth, then the graph $\Gamma_\lambda$ has uniformly polynomial growth for any $\lambda\ge1$.\\
 Moreover, a growth polynomial of $\Gamma_\lambda$ can be found in terms of $\lambda$, $r$ and a growth polynomial of $M$.
-Namely, if $x\mapsto p(x)$ is a growth polynomial of $M$, then $x\mapsto p(\lambda\cdot r\cdot x)$ is a growth polynomial of $\Gamma_\lambda$.
+Namely, if $x\mapsto p(x)$ is a growth polynomial of $M$, then $x\mapsto p(2\cdot\lambda\cdot r\cdot x)$ is a growth polynomial of $\Gamma_\lambda$.
 \end{enumerate}
 } 
 
@@ -308,11 +309,11 @@ note that the functions $\phi_v$ are uniformly smooth.
 Set 
 \[\Psi=\sum_{v\in V} \psi_v\quad \text{and}\quad \phi_v=\frac{\psi_v}{\Psi}.\]
 The obtained functions $\phi_v$ form a partition of unity subordinate to $\{2\cdot B_v\}$.
-Note that $1\z\le \Psi\z\le N_2$; therefore, the functions $\phi_v$ are uniformly smooth. 
+By \textit{\ref{item:1/N}} in §\ref{par:intersection-graph}, $1\z\le \Psi\z\le N_2$; therefore, the functions $\phi_v$ are uniformly smooth. 
 
 Given $x\in M$, consider the set 
 \[V_x=\set{v\in V}{\phi_v(x)>0}.\]
-Note that $\phi_v(x)>0$ implies that $2\cdot B_v\ni x$.
+If $\phi_v(x)>0$, then $2\cdot B_v\ni x$.
 Therefore $V_x$ is a clique in $\Gamma_2$.
 Moreover,
 \[|x-y|\ge 4\cdot r=1
@@ -326,7 +327,8 @@ Let $\Phi\: V\to\RR^{n}$ be the map constructed in §\ref{par:Phi}.
 Given $x\in M$, define $f_1(x)$ as the barycenter of points $\Psi(v)$ with masses $\phi_v(x)$ for each $v\in V_x$.
 By §\ref{par:Phi}, $\diam V_x\le \rho$,
 and since the functions $\phi_v$ are uniformly smooth, so is $f_1$.
-Note that $f_1(x)$ lies in the convex hull of $\Phi(V_x)$ for any $x\in M$.
+
+By the construction, $f_1(x)$ lies in the convex hull of $\Phi(V_x)$ for any $x\in M$.
 It remains to apply \ref{eq:cliques} and §\ref{par:Phi}.
 \qeds
 
@@ -353,7 +355,7 @@ Consider the map $S_i\:M\to\RR^n$ defined by
 \[S_i\df\sum_{v\in V_i}s_v.\]
 Note that $S_i$ is uniformly smooth and it is uniformly bi-Lipschitz in every ball $2\cdot B_v$ for $v\in V_i$.
 It follows that $S_1\oplus\dots\oplus S_{N_2}\:M\to \RR^{N_2\cdot n}$ is uniformly smooth and bi-Lipschitz in  $2\cdot B_v$ for any $v\in V$.
-The proposition follows since $r=1$ is a Lebesgue number of the covering $\{2\cdot B_v\}$.
+The proposition follows since $r=1$ is a Lebesgue number of the covering $\{2\cdot B_v\}$; see \textit{\ref{item:Lebesgue}} in §\ref{par:intersection-graph}.
 \qeds
 
 \section*{Uniform Nash's construction}
@@ -370,7 +372,7 @@ We say that $\mathcal{A}$ is \emph{appropriate} if it meets the following condit
 \end{itemize}
 
 A metric tensor $g$ on $M$ will be called \emph{uniformly regular} with respect to an appropriate atlas $\mathcal{A}$
-if for every integer $k$, all components of the metric tensor in all charts of $\mathcal{A}$ have bounded $C^k$-norms,
+if for every integer $k\ge 0$, all components of the metric tensor in all charts of $\mathcal{A}$ have bounded $C^k$-norms,
 and all the charts are uniformly bi-Lipschitz with respect to the metric induced by $g$ on $M$. 
 
 Analogously, we can define a \emph{uniformly regular sequence of metrics} on a fixed manifold with a chosen appropriate atlas.
@@ -394,13 +396,13 @@ A Riemannian manifold $M$ has bounded geometry if and only if its metric is unif
 
 Also note that \textit{if $M$ comes with a uniformly regular metric for some appropriate atlas $\mathcal{A}$,
 then a map $f\:M\to \RR^d$ is uniformly smooth if and only if for every integer $k\ge 0$,
-the functions $f\circ\sigma-f\circ\sigma(0)\: \DD^n\to \RR^d$ for all charts $\sigma\in \mathcal{A}$
+the functions $f\circ\sigma-f\circ\sigma(0)\: \DD^n\to \RR^d$ for charts $\sigma\in \mathcal{A}$
 have uniformly bounded $C^k$-norms.}
 
 
 \paragraph{Proposition.}\label{par:nash}
 \textit{Let $M$ be a complete $n$-dimensional Riemannian manifold with bounded geometry.
-Then for some integer $d$, there is a uniformly smooth isometric immersion $f_3\:M\to\RR^d$.}
+Then for some integer $d_3$, there is a uniformly smooth isometric immersion $f_3\:M\to\RR^{d_3}$.}
 
 \medskip
 
@@ -418,12 +420,12 @@ Namely, the functions $\psi^r$ in \cite[(C2)]{nash} and $\alpha_r$ in \cite[(C10
 Further, the so-called \emph{Nash's reduction} \cite[Part D]{nash} reduces the existence of an isometric immersion of $M$ to the existence of isometric immersions $(\mathbb{S}^n,g_i)\to \RR^d$ for a sequence of Riemannian metrics $g_i$.
 Nash starts with an atlas with bounded multiplicity, and for each chart, he produces a sequence of metrics $g_i$ on $\mathbb{S}^n$ with a sequence of smooth maps $\phi_i\:M\to (\mathbb{S}^n,g_i)$ 
 such that the sum of metrics induced by $\phi_i$ on $M$ coincides with $g$.
-Then an isometric immersion constructed from embeddings $s_i$ as above.
+Then an isometric immersion is constructed from embeddings $s_i$ as above.
 
 Applying rescaling, we may assume that $|\sec_M|\le \tfrac1{100}$ and $\inj M\ge 10$.
 Let us choose a standard atlas on $M$ as in §\ref{par:uniformly-regular}.
 Then Nash's construction produces a uniformly smooth sequence of maps $\phi_i$ and a sequence of metrics satisfying the above condition.
-As a result, we get a uniformly smooth isometric immersion $(M,g)\to \RR^d$, where $d= \tfrac12\cdot N_2\cdot n\cdot(3\cdot n+11)$.
+As a result, we get a uniformly smooth isometric immersion $(M,g)\to \RR^{d_3}$, where $d_3= \tfrac12\cdot N_2\cdot n\cdot(3\cdot n+11)$.
 
 \section*{Proof assembling}
 
@@ -436,7 +438,7 @@ Let $h$ be the metric induced by $f_1\oplus f_2$
 and $g$ be the original metric on $M$.
 
 Choose $\eps>0$ such that $\eps^2\cdot h<\tfrac12\cdot g$.
-Note that $g-\eps^2\cdot h$ is a uniformly regular and smooth metric on $M$ for a standard atlas; see §\ref{par:uniformly-regular}.
+The metric tensor $g-\eps^2\cdot h$ is uniformly regular and smooth on $M$ for a standard atlas; see §\ref{par:uniformly-regular}.
 By §\ref{par:uniformly-regular}, $(M,g-\eps^2\cdot h)$ has bounded geometry.
 By §\ref{par:nash}, there is a uniformly smooth map $f_3\:M\to\RR^{d_3}$ that induces metric $g-\eps^2\cdot h$ on $M$.
 
@@ -454,7 +456,7 @@ It remains to show that $f$ is tubed.
 \end{wrapfigure}
 
 Assume the contrary;
-that is, for any $\eps>0$ there is a point $x\in \RR^d$ that lies on distance smaller than $\eps$ to $f(M)$ such that the distance function from $x$ has at least two minimum points on $f(M)$,
+that is, for any $\eps>0$ there is a point $x\in \RR^d$ that lies at a  distance smaller than $\eps$ to $f(M)$ such that the distance function from $x$ has at least two minimum points on $f(M)$,
 say $f(p)$ and $f(q)$.
 Denote by $\gamma$ a minimizing geodesic from $p$ to $q$ in $M$.
 
@@ -472,30 +474,29 @@ The latter is impossible if $\eps$ is small.
 
 \paragraph{Theorem.}\label{par:univeral}\textit{
 Let $\Gamma$ be a connected graph of bounded degree.
-Then there is a connected graph $\Delta$ of degree $\le 3$ such that there is no map $f\:\Vert \Delta\to \Vert \Gamma$ such that
+Then there is a connected graph $\Delta$ of degree $\le 3$ such that there is no map $f\:\Vert \Delta\to \Vert \Gamma$ such that for some constant $K$ we have the following.
 \begin{enumerate}[(i)]
-\item $|f^{-1}(h)|\le K$ for any vertex $h$ in $\Gamma$, and
-\item $|f(v)-f(x)|_\Gamma\le K$ for any two adjacent vertices $v, w$ in $\Delta$
+\item $|f^{-1}(h)|\le K$ for any vertex $h$ in $\Gamma$.
+\item $|f(v)-f(x)|_\Gamma\le K$ for any two adjacent vertices $v, w$ in $\Delta$.
 \end{enumerate}
-for some constant $K$.
 }
 
 \medskip
 
 A slightly weaker statement was proved by Florian Lehner \cite[1.2]{lehner} and rediscovered by Fedor Petrov \cite{462670};
 we will modify their proof straightforwardly.
-The conditions are closely related to the so-called \emph{regular maps};
+The conditions in the theorem are closely related to the so-called \emph{regular maps};
 see \cite{hume-mackay-tessera} and the references therein.
 
 \parit{Proof.}
 Suppose $\Gamma$ is an infinite connected graph with bounded degree.
-Note that $\Gamma$ has a countable set of vertices; so we can identify $\Vert \Gamma$ with the set of natural numbers $\NN$.
+Observe that $\Gamma$ has a countable set of vertices; so we can identify $\Vert \Gamma$ with the set of natural numbers $\NN$.
 
 Choose a sequence $n_1,n_2,\dots$ of natural numbers such that each $n\in \NN$ appears infinitely many times in it;
 for example, we may take the following sequence: $1, 2, 1, 3, 1, 2, 1, 4, 1,\dots$
 
 Let us construct a graph $\Delta$ with degree at most $3$ such that no map $f$ meets the condition in the theorem for any $K$.
-In the following construction, the set of vertices of $\Delta$ will be $\NN$, and it will contain an infinite path $P=1\sim 2\sim \dots$.
+In the following construction, the set of vertices of $\Delta$ will be $\NN$, and it will contain an infinite path $P=1\sim 2\sim \dots$
 There will be a fast growing sequence $S_1<S_2<\dots$ such that 
 if $i\sim j$ for some $i<j$, then $j-i=1$ or $S_k<i<j\le S_{k+1}$ for some $k$.
 
@@ -519,7 +520,7 @@ More precisely, we count labeled graphs; that is, graphs $\Delta_k$ with vertice
 
 How much of these graphs have the required maps $f\:\Vert \Delta_k\to \Vert \Gamma$?
 Suppose that the degree of $\Gamma$ does not exceed $d-1$.
-Note that each $k$-ball in $\Gamma$ has at most $d^k$ vertices.
+Then each $k$-ball in $\Gamma$ has at most $d^k$ vertices.
 Therefore we have at most $d^{k\cdot S_{k+1}}$ different maps of the path $P_k$.
 Given one such map, there are at most $k\cdot d^k$ ways to add a diagonal at each vertex.
 Therefore the number of labeled graphs that admit a required map $f\:\Vert \Delta_k\to \Vert \Gamma$ for $K=k$ grows exponentially with respect to $S_k$.
@@ -536,15 +537,15 @@ Recall that $\Gamma_2$ has bounded degree.
 Let $\Delta$ be the graph provided by §\ref{par:univeral} for $\Gamma_2$;
 it is a connected graph with  degree at most~3.
 
-Let us choose a \emph{tube}; that is, the cylinder $\mathbb{S}^{n-1}\times [0,1]$ with smooth Riemannian metric such that a neighborhood of each boundary component is isometric to a small annulus in the unit sphere $\mathbb{S}^n$, so it can be used to connect spheres.
+Let us choose a \emph{tube}; that is, the cylinder $\mathbb{S}^{n-1}\times [0,1]$ with a smooth Riemannian metric such that a neighborhood of each boundary component is isometric to a small annulus in the unit sphere $\mathbb{S}^n$, so it can be used to connect spheres.
 Prepare a unit sphere $\mathbb{S}^n$ for every vertex in $\Delta$.
 Connect two spheres by a tube if the corresponding vertices are adjacent.
-Note that the obtained manifold $M$ has bounded geometry.
+The obtained manifold $M$ has bounded geometry.
 
 Assume there is an isometric tubed embedding $\iota\colon M\hookrightarrow N$.
 We can assume that $\Delta$ is embedded in $M$ so that each vertex lies on the corresponding sphere.
 Consider the map $\Delta\to \Gamma_2$ that sends a vertex $v\in \Vert \Delta$ to a vertex of $\Gamma_2$ that lies at minimal distance from $\iota(v)$.
-Note that for some $K$, the obtained map satisfies the conditions in the theorem in §\ref{par:univeral} --- a contradiction.
+The obtained map satisfies the conditions in §\ref{par:univeral} for some $K$ --- a contradiction.
 \qeds
 
 
@@ -559,7 +560,7 @@ Let us say that a Riemannian manifold $M$ has \emph{$k$-bounded geometry} if the
 For example, $0$-bounded geometry means positive injectivity radius and bounded curvature.
 
 
-In the proof of the main theorem, one can assume that $M$ has only $3$-bounded geometry;
+In the main theorem, it is sufficient to assume that $M$ has only $3$-bounded geometry;
 the proof requires only minor changes.
 Below we discuss $1$- and $0$-bounded geometry.
 
@@ -584,7 +585,7 @@ in particular, such an immersion has bounded normal curvatures.
 Furthermore, following §\ref{par:other-proof}, we get that
 \textit{for any $m\ge 2$ and $\alpha\in(0,1)$, any manifold with uniformly $C^{m,\alpha}$-regular metric and uniformly polynomial growth admits a uniformly $C^{m,\alpha}$-smooth tubed isometric embedding into a Euclidean space of large dimension.}
 
-Note that uniformly $C^{1,1}$-regular metric has bounded sectional curvature and positive injectivity radius.
+Straightforward calculations show that a uniformly $C^{1,1}$-regular metric has bounded sectional curvature and positive injectivity radius.
 It is unknown if the converse holds.
 Also it is unknown if a manifold with $C^{1,1}$-regular metric admits a $C^{1,1}$-smooth isometric embedding into Euclidean space.
 These are two parts of the question posed by Vitali Kapovitch and Alexander Lytchak \cite[1.10]{kapovitch-lytchak}.
@@ -597,37 +598,44 @@ Applying the result of Anders K\"{a}ll\'{e}n \cite{kallen}, the argument in §\r
 \textit{for any $\alpha\in(0,1)$, any manifold with $C^{1,\alpha}$-regular metric and uniformly polynomial growth admits a  uniformly $C^{1,\alpha}$-smooth uniformly graphical embedding into a Euclidean space of large dimension.}
 In other words, for arbitrary small positive $\eps$, the $C^{2,\eps}$ and $C^{1,1-\eps}$ versions of the uniformly graphical question have affirmative answers, but $C^{1,1}$---the most important case---remains open.
 
-\begin{thm}{Question}
-Suppose $M$ is an $n$-dimensional Riemannian manifold of bounded geometry.
+\paragraph{Question}
+\textit{Suppose that an $n$-dimensional Riemannian manifold $M$ has bounded geometry.
 What is necessary and sufficient condition for the existence of tubed isometric embeddings of $M$
-into (1) hyperbolic space of sufficiently large dimension or (2) product of sufficiently many hyperbolic planes?
-\end{thm}
+into (1) hyperbolic space of sufficiently large dimension or (2) product of sufficiently many hyperbolic planes?}
 
-Note that polynomial growth is a sufficient condition for both questions.
+\medskip
+
+The condition of uniformly polynomial growth is sufficient for both questions.
 It follows from the main theorem; the second case is trivial and the first case follows 
 since a horosphere defines a tubed isometric embedding of a Euclidean space into a hyperbolic space.
 Evidently this condition is not necessary.
 
-The argument presented by David Hume and Alessandro Sisto \cite[1.1]{hume-sisto} can be used to find some necessary conditions; for example, \textit{the product of the hyperbolic plane and the real line does not admit a tubed embedding into hyperbolic space of arbitrary dimension}.
+An argument presented by David Hume and Alessandro Sisto \cite[1.1]{hume-sisto} can be used to find some necessary conditions. For example, \textit{the product of the hyperbolic plane and the real line does not admit a tubed embedding into hyperbolic space of arbitrary dimension}.
 Also, a manifold with infinite asymptotic dimension does not admit a tubed embedding into a product of hyperbolic planes.
 The latter assertion relies on the monotonicity of asymptotic dimension with respect to maps between graphs satisfying the two conditions in §\ref{par:univeral}.
 Namely, \textit{if $f\:\Delta\to \Gamma$ is such a map between graphs with bounded degrees, then $\mathrm{asdim}\,\Delta\le \mathrm{asdim}\,\Gamma$}.
 (The proof is left to the reader.)
 
-Finally, it would be interesting to understand what happens if we do not require $N$ to have bounded geometry in §\ref{par:other-intro}. 
+The proof in §\ref{par:other-proof} works equally well if $N$ has only 0-bounded geometry. 
+It would be interesting to understand what happens if in §\ref{par:other-intro} we assume that $N$ is just a complete connected smooth Riemannian manifold. 
 
 \paragraph{Acknowledgments.} 
-This note is inspired by the question of Peter Michor \cite{124840}.
+This note is inspired by a question posed by Peter Michor \cite{124840}.
 I want to thank 
 \texttt{aorq} (\texttt{user:1079} at MathOverflow),
+Alexander Dranishnikov,
 Michael Gromov,
+David Hume,
 Nina Lebedeva,
 James Lee,
 Alexander Lytchak, 
 Fedor Petrov,
 and
-Danielel Semola,
+Daniele Semola
 for help.
+
+This work was partially supported by the National Science Foundation, grant DMS-2005279,
+and the L. Euler International Mathematical Institute at PDMI RAS, grant 075-15-2022-289.
 
 
 {\sloppy
