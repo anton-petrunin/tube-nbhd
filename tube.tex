@@ -1,14 +1,16 @@
-\documentclass[a4paper,10pt]{article}
+%\newcommand{\arxiv}[2]{#1} %for arxiv
+\newcommand{\arxiv}[2]{#2} %for mjm
+
+\arxiv{\documentclass[a4paper,10pt]{article}}{\documentclass{mjm}}
 
 \usepackage{paper-en}
-\usepackage{hyperref}
+\arxiv{\usepackage{hyperref}}{\usepackage{mjm}}
 %\usepackage[notref,notcite,color]{showkeys}
-
 
 \def\thetitle{Tubed embeddings}
 \def\theauthors{Anton Petrunin}
 
-\hypersetup{colorlinks=true,
+\arxiv{\hypersetup{colorlinks=true,
 citecolor=black,
 linkcolor=black,
 anchorcolor=black,
@@ -17,7 +19,7 @@ menucolor=black,
 urlcolor=black,
 pdftitle={\thetitle},
 pdfauthor={\theauthors}
-}
+}}{}
 
 %\overfullrule=100mm
 
@@ -25,10 +27,13 @@ pdfauthor={\theauthors}
 %\pagestyle{empty}\renewcommand\includegraphics[2][{}]{}
 
 
-\title{\thetitle}
+\arxiv{\title{\thetitle}
 \author{\theauthors}
 \date{}
-\maketitle
+\maketitle}{\title{\thetitle}
+\headtitle{\thetitle}
+\headauthor{\theauthors}
+\thanks{This work was partially not supported by the DFG}\maketitle}
 
 \begin{abstract}
 We consider the following question:
@@ -185,7 +190,7 @@ for any open set $X\subset M$.
 Note that $B(x,R)_M\subset B(x,R)_{\RR^d}$ for any $x\in M$;
 here $B(x,R)_M$ and $B(x,R)_{\RR^d}$ denote balls in the metric of $M$ and $\RR^d$ respectively.
 Therefore 
-\[\pi^{-1}[B(x,R)_M]\subset B(x,R+\eps)_{\RR^d}.\]
+\[\pi^{-1}[B(x,R)_M]\subset B(x,R+\eps)_{\RR^d}.\arxiv{}{\qquad\qquad\qquad\qquad\qquad\qquad}\]
 Since $R\mapsto \vol_d B(x,R+\eps)_{\RR^d}$ is a polynomial function, we conclude that $M$ has uniformly  polynomial growth.
 \qeds
 
@@ -234,7 +239,7 @@ By §\ref{par:graph-embedding}, it is sufficient to prove the corollary for $\Ga
 
 Take $d=n+2^n$.
 Let us color vertices of $\ZZ^n_\infty$ in $2^n$ colors so that adjacent vertices get different colors.
-Let $e_1,\dots s_{2^n}$ be the standard basis in $\RR^{2^n}$.
+Let $e_1,\dots,s_{2^n}$ be the standard basis in $\RR^{2^n}$.
 Consider the map $\Phi\:\ZZ^n\to \RR^d=\RR^n\oplus \RR^{2^n}$ defined by $\Phi\:v\mapsto v\oplus e_{i(v)}$ where $i(v)$ denotes the color of $v$.
 After an appropriate rescaling, the obtained map meets the conditions.
 \qeds
@@ -432,7 +437,7 @@ As a result, we get a uniformly smooth isometric immersion $(M,g)\to \RR^{d_3}$,
 
 \paragraph{Proof of the main theorem (§\ref{par:main}).}\label{par:main-proof}
 Let $f_1\:M\to\RR^{d_1}$ and $f_2\:M\to\RR^{d_2}$ be the maps constructed in §\ref{par:rough-embedding} and §\ref{par:local-embedding}.
-Consider the map $f_1\oplus f_2\:M\to \RR^{d_1+d_2}$ defined by $p\mapsto (f_1(p),f_2(p))\in \RR^{d_1}\oplus\RR^{d_2}=\RR^{d_1+d_2}$.
+Consider the map $f_1\oplus f_2\:M\z\to \RR^{d_1+d_2}$ defined by $p\mapsto (f_1(p),f_2(p))\in \RR^{d_1}\oplus\RR^{d_2}=\RR^{d_1+d_2}$.
 
 Let $h$ be the metric induced by $f_1\oplus f_2$
 and $g$ be the original metric on $M$.
@@ -593,7 +598,7 @@ If both questions have affirmative answers, then the presented argument should p
 
 If the smoothness is below $C^{1,1}$, then there is no hope for tubed isometric embedding.
 However, it is easy to see that an embedding $f\:M\to \RR^d$ with bounded normal curvature is tubed if and only if it is \emph{uniformly graphical};
-that is, there is $r>0$ such that for any $p\in M$ the set $B(f(p),r)\cap f(M)$ is a graph of a function $\RR^n\to \RR^{d-n}$ for a suitable choice of coordinate system in $\RR^d$.
+that is, there is $r>0$ such that for any $p\in M$ the set $B(f(p),r)\z\cap f(M)$ is a graph of a function $\RR^n\to \RR^{d-n}$ for a suitable choice of coordinate system in $\RR^d$.
 Applying the result of Anders K\"{a}ll\'{e}n \cite{kallen}, the argument in §\ref{par:other-proof} produces that 
 \textit{for any $\alpha\in(0,1)$, any manifold with $C^{1,\alpha}$-regular metric and uniformly polynomial growth admits a  uniformly $C^{1,\alpha}$-smooth uniformly graphical embedding into a Euclidean space of large dimension.}
 In other words, for arbitrary small positive $\eps$, the $C^{2,\eps}$ and $C^{1,1-\eps}$ versions of the uniformly graphical question have affirmative answers, but $C^{1,1}$---the most important case---remains open.

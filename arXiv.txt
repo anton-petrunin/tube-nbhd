@@ -2,7 +2,9 @@ tube.tex
 tube.bbl
 paper-en.sty
 library.bib
-mppics/pic-5.mps
-mppics/pic-10.mps
-mppics/pic-20.mps
+mppics/pic-5.eps
+mppics/pic-10.eps
+mppics/pic-20.eps
+mjm.sty
+mjm.cls
 

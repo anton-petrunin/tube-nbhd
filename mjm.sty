@@ -1,0 +1,89 @@
+\IfFileExists{\jobname.mjm_meta}{\input{\jobname.mjm_meta}}{%
+\newcommand{\mjmyear}{---}%
+\newcommand{\mjmvolume}{---}%
+\newcommand{\mjmfirstpage}{999}%
+\newcommand{\mjmlastpage}{999}}
+
+\newcommand{\mjm}{M\"{u}nster Journal of Mathematics}
+\newcommand{\mjmabbr}{M\"{u}nster J. of Math.}
+\newcommand{\mjmshort}{MJM}
+
+\newcommand{\themjmpage}{
+	\textsc{%
+		Vol.~\mjmvolume~(\mjmyear),~\mjmfirstpage--\mjmlastpage
+	}
+}
+
+\newcommand{\mjmfancyheadEL}{\footnotesize{\thepage}}
+\newcommand{\mjmfancyheadEC}{\footnotesize{\textsc{\tmpheadauthor}}}
+\newcommand{\mjmfancyheadER}{}
+
+\newcommand{\mjmfancyheadOL}{}
+\newcommand{\mjmfancyheadOC}{\footnotesize{\textsc{\tmpheadtitle}}}
+\newcommand{\mjmfancyheadOR}{\footnotesize{\thepage}}
+
+\newcommand{\mjmfancyfootEL}{}
+\newcommand{\mjmfancyfootEC}{\footnotesize{\mjm~\themjmpage}}
+\newcommand{\mjmfancyfootER}{}
+
+\newcommand{\mjmfancyfootOL}{}
+\newcommand{\mjmfancyfootOC}{\footnotesize{\mjm~\themjmpage}}
+\newcommand{\mjmfancyfootOR}{}
+
+\setcounter{page}{\mjmfirstpage}
+\usepackage{amssymb}
+\renewcommand{\emptyset}{\varnothing}
+%\setlength{\parindent}{0mm}
+% \setlength{\textheight}{538pt}
+
+% http://www.ctan.org/tex-archive/macros/latex/contrib/fancyhdr/fancyhdr.pdf
+\usepackage{fancyhdr}
+	
+	\setlength{\headsep}{\baselineskip}
+	\setlength{\footskip}{2\baselineskip}
+	
+	\renewcommand{\headrulewidth}{0pt}
+	\renewcommand{\footrulewidth}{0pt}
+
+	\setlength{\headheight}{12pt}
+	\pagestyle{fancy}{
+		\fancyhf{}
+		
+		\fancyhead[EL]{\mjmfancyheadEL}
+		\fancyhead[EC]{\mjmfancyheadEC}
+		\fancyhead[ER]{\mjmfancyheadER}
+		
+		\fancyhead[OL]{\mjmfancyheadOL}
+		\fancyhead[OC]{\mjmfancyheadOC}
+		\fancyhead[OR]{\mjmfancyheadOR}
+		
+		\fancyfoot[EL]{\mjmfancyfootEL}
+		\fancyfoot[EC]{\mjmfancyfootEC}
+		\fancyfoot[ER]{\mjmfancyfootER}
+		
+		\fancyfoot[OL]{\mjmfancyfootOL}
+		\fancyfoot[OC]{\mjmfancyfootOC}
+		\fancyfoot[OR]{\mjmfancyfootOR}
+	}
+	
+	\fancypagestyle{plain}{%
+		\fancyhf{}
+		
+		\setlength{\headheight}{22pt}
+
+		\fancyhead[EL]{}
+		\fancyhead[EC]{}
+		\fancyhead[ER]{}
+		
+		%\fancyhead[OL]{\mjm\\\themjmpage}
+		\fancyhead[OC]{}
+		\fancyhead[OR]{}
+		
+		\fancyfoot[EL]{}
+		\fancyfoot[EC]{}
+		\fancyfoot[ER]{}
+		
+		\fancyfoot[OL]{}
+		\fancyfoot[OC]{}
+		\fancyfoot[OR]{}
+	}
