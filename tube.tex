@@ -96,7 +96,13 @@ Loosely speaking, the following statement says that there is no universal space 
 \begin{thm}{Proposition}
 Let $N$ be a Riemannian manifold with bounded geometry and $n\ge 2$.
 Then there is an $n$-dimensional  Riemannian manifold $M$ with bounded geometry that does not admit an isometric tubed embedding in $N$.
+
+Moreover, if $N_1, N_2, \dots $ is a sequence of Riemannian manifolds with bounded geometry of arbitrary dimensions.
+Then there is an $n$-dimensional Riemannian manifold $M$ with bounded geometry that does not admit an isometric tubed embedding in any $N_k$.
 \end{thm}
+
+Note that in the second statement the dimensions of $N_i$ can be arbitrary.
+In particular, there are manifolds with bounded geometry that do not admit tubed embedding into any hyperbolic space, or any product of hyperbolic planes and so on; see also §\ref{par:Hn+H2n}.
 
 \paragraph{About the proofs.}
 The observation in §\ref{par:Observation} is proved in §§\ref{lem:gauss}--\ref{par:obs-proof}.
@@ -486,6 +492,9 @@ Then there is a connected graph $\Delta$ of degree $\le 3$ such that there is no
 \end{enumerate}
 }
 
+\textit{Moreover, if $\Gamma_1,\Gamma_2,\dots$ be a sequence of connected graphs with bounded degrees.
+Then there is a connected graph $\Delta$ of degree $\le 3$ such that for any $i$ there is no map $f\:\Vert \Delta\to \Vert \Gamma_i$ with above properties.}
+
 \medskip
 
 A slightly weaker statement was proved by Florian Lehner \cite[1.2]{lehner} and rediscovered by Fedor Petrov \cite{462670};
@@ -531,6 +540,9 @@ Given one such map, there are at most $k\cdot d^k$ ways to add a diagonal at eac
 Therefore the number of labeled graphs that admit a required map $f\:\Vert \Delta_k\to \Vert \Gamma$ for $K=k$ grows exponentially with respect to $S_k$.
 It follows that we may choose a sufficiently large $S_k$,
 so that there is a graph $\Delta_k$ that meets \ref{clm:fk}.
+
+To prove the second statement, note that the set of vertices in all $\Gamma_i$ is countable,
+and therefore we can apply the same argument.
 \qeds
 
 \paragraph{Proof of the proposition in §\ref{par:other-intro}.}\label{par:other-proof}
@@ -551,6 +563,8 @@ Assume there is an isometric tubed embedding $\iota\colon M\hookrightarrow N$.
 We can assume that $\Delta$ is embedded in $M$ so that each vertex lies on the corresponding sphere.
 Consider the map $\Delta\to \Gamma_2$ that sends a vertex $v\in \Vert \Delta$ to a vertex of $\Gamma_2$ that lies at minimal distance from $\iota(v)$.
 The obtained map satisfies the conditions in §\ref{par:univeral} for some $K$ --- a contradiction.
+
+To prove the second statement, argue in the same manner, applying the second statement in §\ref{par:univeral}.
 \qeds
 
 
@@ -603,13 +617,15 @@ Applying the result of Anders K\"{a}ll\'{e}n \cite{kallen}, the argument in §\r
 \textit{for any $\alpha\in(0,1)$, any manifold with $C^{1,\alpha}$-regular metric and uniformly polynomial growth admits a  uniformly $C^{1,\alpha}$-smooth uniformly graphical embedding into a Euclidean space of large dimension.}
 In other words, for arbitrary small positive $\eps$, the $C^{2,\eps}$ and $C^{1,1-\eps}$ versions of the uniformly graphical question have affirmative answers, but $C^{1,1}$---the most important case---remains open.
 
-\paragraph{Question}
+\paragraph{Question}\label{par:Hn+H2n}
 \textit{Suppose that an $n$-dimensional Riemannian manifold $M$ has bounded geometry.
 What is necessary and sufficient condition for the existence of tubed isometric embeddings of $M$
 into (1) hyperbolic space of sufficiently large dimension or (2) product of sufficiently many hyperbolic planes?}
 
 \medskip
 
+By §\ref{par:other-intro}, the conditions have to be nontrivial, 
+but it says nothing about what these conditions should be.
 The condition of uniformly polynomial growth is sufficient for both questions.
 It follows from the main theorem; the second case is trivial and the first case follows 
 since a horosphere defines a tubed isometric embedding of a Euclidean space into a hyperbolic space.
@@ -621,7 +637,7 @@ The latter assertion relies on the monotonicity of asymptotic dimension with res
 Namely, \textit{if $f\:\Delta\to \Gamma$ is such a map between graphs with bounded degrees, then $\mathrm{asdim}\,\Delta\le \mathrm{asdim}\,\Gamma$}.
 (The proof is left to the reader.)
 
-The proof in §\ref{par:other-proof} works equally well if $N$ has only 0-bounded geometry. 
+Finally, let us note that the proof in §\ref{par:other-proof} works equally well if $N$ has only 0-bounded geometry. 
 It would be interesting to understand what happens if in §\ref{par:other-intro} we assume that $N$ is just a complete connected smooth Riemannian manifold. 
 
 \paragraph{Acknowledgments.} 
