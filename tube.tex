@@ -575,7 +575,7 @@ To prove the second statement, argue in the same manner, applying the second sta
 
 
 \paragraph{}\label{par:remarks}
-Let us say that a Riemannian manifold $M$ has \emph{$k$-bounded geometry} if there is a constant $C_k > 0$ such that $|\nabla^i \Rm| \le C_k$ for any nonnegative integer $i\le k$.
+Let us say that a Riemannian manifold $M$ has \emph{$k$-bounded geometry} if it has positive injectivity radius and there is a constant $C_k > 0$ such that $|\nabla^i \Rm| \le C_k$ for any nonnegative integer $i\le k$.
 For example, $0$-bounded geometry means positive injectivity radius and bounded curvature.
 
 
@@ -592,13 +592,13 @@ Let us call such atlas \emph{$C^{m+1,\alpha}$-appropriate}.
 Furthermore, in the definition of uniformly regular metric let us assume that the atlas is only $C^{m+1,\alpha}$-appropriate, and instead of bounded $C^k$ norm for all $k$,
 we only require that metric has bounded $C^{m,\alpha}$ norm in every chart.
 Let us call such metrics \emph{uniformly $C^{m,\alpha}$-regular}.
-Note that a $C^\infty$-smooth metric might fail to be uniformly $C^{m,\alpha}$-regular even if injectivity radius is positive.
+Note that a $C^\infty$-smooth metric on a noncompact manifold might fail to be uniformly $C^{m,\alpha}$-regular even if injectivity radius is positive.
 
 Recall that if metric is $C^{m,\alpha}$, then it remains to be $C^{m,\alpha}$ in the harmonic charts.
 This fundamental result was obtained by Idzhad Sabitov and Samuil Shefel \cite{sabitov-shefel} and rediscoved by Dennis DeTurck and Jerry Kazdan \cite{deturck-kazdan}.
 Applying this technique, one could get that \textit{manifolds with $1$-bounded geometry have uniformly $C^{2,\alpha}$-regular metric for any $\alpha\in (0,1)$}.
 
-Using Günther's version of the embedding theorem \cite{guenther} in §\ref{par:nash},
+Arguing as in in §\ref{par:nash} with Günther's version of the embedding theorem \cite{guenther},
 we obtain the following: \textit{for any $m\ge 2$ and $\alpha\in(0,1)$, any manifold with uniformly $C^{m,\alpha}$-regular metric admits a uniformly $C^{m,\alpha}$-smooth isometric immersion into Euclidean space;}
 in particular, such an immersion has bounded normal curvatures.
 Furthermore, following §\ref{par:other-proof}, we get that
@@ -609,6 +609,7 @@ It is unknown if the converse holds.
 Also it is unknown if a manifold with $C^{1,1}$-regular metric admits a $C^{1,1}$-smooth isometric embedding into Euclidean space.
 These are two parts of the question posed by Vitali Kapovitch and Alexander Lytchak \cite[1.10]{kapovitch-lytchak}.
 If both questions have affirmative answers, then the presented argument should produce a converse to the observation in §\ref{par:Observation}.
+(It is not hard to check that if converse to the observation hods, then any compact Riemannian manifold with bounded sectional curvature admits a $C^{1,1}$-smooth isometric embedding into Euclidean space.)
 
 If the smoothness is below $C^{1,1}$, then there is no hope for tubed isometric embedding.
 However, it is easy to see that an embedding $f\:M\to \RR^d$ with bounded normal curvature is tubed if and only if it is \emph{uniformly graphical};
