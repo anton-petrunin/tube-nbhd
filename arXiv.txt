@@ -5,6 +5,9 @@ library.bib
 mppics/pic-5.eps
 mppics/pic-10.eps
 mppics/pic-20.eps
+mppics/pic-5-eps-converted-to.pdf
+mppics/pic-10-eps-converted-to.pdf
+mppics/pic-20-eps-converted-to.pdf
 mjm.sty
 mjm.cls
 
